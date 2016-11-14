@@ -26,8 +26,8 @@
             expect(this.latest_result.getText()).toEqual(result);
           };
 
-          this.checkHistory = function() {
-
+          this.checkHistory = function(count) {
+            expect(this.history.count()).toEqual(count);
           };
 
         };

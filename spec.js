@@ -37,9 +37,7 @@
       });
 
       it('should history has all history', function() {
-        //result in memory
-        //*[@ng-repeat='result in memory']
-
+        calculatorPage.checkHistory(5);
       });
 
     });
