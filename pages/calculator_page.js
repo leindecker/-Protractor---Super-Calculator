@@ -7,6 +7,8 @@ var CalculatorPage = function() {
   this.history = element.all(by.repeater('result in memory'));
   this.btnGo = element(by.id('gobutton'));
 
+  var utils = require('../framework/utils.js');
+
   this.navigate = function() {
     browser.get(browser.params.page.appUrl);
     browser.driver.manage().window().maximize();
@@ -27,8 +29,10 @@ var CalculatorPage = function() {
     expect(this.history.count()).toEqual(count);
   };
 
-  this.checkMathResult = function(mathResult) {
-    expect(this.latest_result.getText()).toEqual(mathResult);
+  this.checkMathResult = function(valueA, valueB, mathOperator) {
+    //console.log("UTILS: " + utils.perfomMathCalc(1, 2, 'ADDITION'));
+    expect(this.latest_result.getText()).toEqual(utils.perfomMathCalc(
+      valueA, valueB, mathOperator));
   };
 
 };

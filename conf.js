@@ -12,7 +12,7 @@ var reporter = new HtmlScreenshotReporter({
 exports.config = {
   framework: 'jasmine',
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['spec.js'],
+  specs: ['./scenarios/happyPathSpec.js'],
   capabilities: {
     browserName: 'chrome',
   },
