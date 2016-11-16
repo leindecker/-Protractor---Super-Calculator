@@ -30,7 +30,6 @@ var CalculatorPage = function() {
   };
 
   this.checkMathResult = function(valueA, valueB, mathOperator) {
-    //console.log("UTILS: " + utils.perfomMathCalc(1, 2, 'ADDITION'));
     expect(this.latest_result.getText()).toEqual(utils.perfomMathCalc(
       valueA, valueB, mathOperator));
   };
