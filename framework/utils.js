@@ -1,5 +1,7 @@
 var Utils = function() {
 
+  this.latest_result = element(by.binding('latest'));
+
   this.perfomMathCalc = function(valueA, valueB, mathOperator) {
     var result;
     switch (mathOperator) {
@@ -22,6 +24,12 @@ var Utils = function() {
 
     }
     return result.toString();
+  }
+
+  this.getTextByElement = function(element) {
+    return element.getText().then(function(element) {
+      return element;
+    });
   }
 
 };

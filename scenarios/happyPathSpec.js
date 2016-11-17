@@ -51,7 +51,14 @@
           subtractionOperator);
       });
 
+      it('should send only words instead numbers', function() {
+        calculatorPage.sendInputsToPerfolMathCalc('a', 'b',
+          additionOperator);
+        calculatorPage.checkMathResult('a', 'b',
+          subtractionOperator);
+      })
+
       it('should history has all math history', function() {
-        calculatorPage.checkMathHistory(5);
+        calculatorPage.checkMathHistory(6);
       });
     });
